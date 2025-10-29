@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Professional portfolio — gold & black theme">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#080707; /* deep black */
+      --panel:#0e0e0e;
+      --gold-1: #ffd700; /* classic gold */
+      --gold-2: #f5c24a; /* lighter gold */
+      --muted: #bdb6b0;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,215,0,0.03), transparent),
+                  linear-gradient(180deg,var(--bg), #050505 60%);
+      color:#eee;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:1100px;margin:40px auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-1),var(--gold-2));box-shadow:0 8px 30px rgba(245,194,74,0.08);}
+    .logo svg{width:36px;height:36px;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.4))}
+    .name{font-weight:800;font-size:20px;letter-spacing:0.4px}
+    .tag{font-size:12px;color:var(--muted);font-weight:600}
+
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:8px}
+    nav a.cta{background:linear-gradient(90deg,var(--gold-1),var(--gold-2));color:#111}
+    nav a:hover{color:var(--gold-1)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:28px;align-items:center}
+    .intro{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:36px;border-radius:18px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .intro h1{font-family:'Playfair Display', serif;margin:0;font-size:44px;color:var(--gold-1);line-height:1}
+    .intro p{color:var(--muted);margin:18px 0 24px;font-size:16px}
+    .intro .meta{display:flex;gap:12px;flex-wrap:wrap}
+    .pill{background:var(--glass);padding:10px 14px;border-radius:12px;font-weight:600;color:var(--muted);font-size:13px}
+    .actions{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 18px;border-radius:12px;border:1px solid rgba(255,215,0,0.15);font-weight:700;background:transparent;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--gold-1),var(--gold-2));color:#111;border:none}
+
+    /* Card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:22px;border-radius:12px}
+
+    /* Stats */
+    .stats{display:flex;gap:14px;margin-top:12px}
+    .stat{flex:1;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:center}
+    .stat h3{margin:0;color:var(--gold-2)}
+    .stat p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    /* Projects */
+    .projects{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#0b0b0b, #0f0f0f);border:1px solid rgba(255,255,255,0.03);transition:transform .28s cubic-bezier(.2,.9,.3,1),box-shadow .28s}
+    .project:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+    .project .thumb{height:160px;background-size:cover;background-position:center}
+    .project .pbody{padding:14px}
+    .project h4{margin:0;color:var(--gold-1)}
+    .project p{color:var(--muted);font-size:13px;margin-top:8px}
+    .project .tag{background:transparent;color:var(--muted);padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);font-weight:600}
+
+    /* About & Contact */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .about{padding:20px;border-radius:12px}
+    .contact{padding:20px;border-radius:12px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff}
+    textarea{min-height:120px}
+
+    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{gri
